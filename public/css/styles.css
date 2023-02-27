@@ -1,0 +1,474 @@
+*,
+*::before,
+*::after{
+  padding : 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+.box{
+  position: relative;
+ background-color:white;
+ width: 100%;
+  width: 1020px;
+  height:640px;
+  border-radius: 3.3rem;
+  box-shadow: 0 60px 40px -30px rgb(0, 0, 0,0.27);
+}
+
+.inner-box{
+position: absolute;
+width: calc(100% - 4.1rem);
+height: calc(100% - 4.1rem);
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+background-color: #fff;
+}
+
+main{
+  margin: 0px;
+  width: 100%;
+  min-height:100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../back1.jpg');
+  /* background: linear-gradient(109.6deg, rgb(251, 250, 225) 11.2%, rgb(206, 240, 185) 47.5%, rgb(100, 163, 111) 100.2%); */
+}
+
+.form-box{
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s ease-in-out;
+}
+
+.carousel{
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  top:0;
+  left:45%;
+  background-color:#A2F2BD;
+  border-radius: 2rem;
+  transition: 0.8s ease-in-out;
+}
+
+.welcome{
+  position:relative;
+  width:85%;
+  left:20px;
+}
+
+.carousel h2{
+  text-align: center;
+  position:relative;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 300;
+  color: #004644
+}
+
+input{
+  font-family: "Montserrat",sans-serif;
+}
+
+body{
+  font-family: "Montserrat",sans-serif;
+  margin: 0px;
+  padding: 0rem;
+}
+
+h1{ 
+  text-align: center;
+  color: #004644;
+}
+
+h2{
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #151111
+}
+
+.heading h6{
+  color: #bababa;
+  font-weight: 400;
+  font-size: 0.75rem;
+  display: inline;
+}
+
+form{
+  max-width: 260px;
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin:0 auto;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  transition: opacity 0.02s 0.4s;
+}
+
+form.sign-up{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.g{
+margin-left: 120px;
+margin-top: 20px;
+}
+
+.or{
+  width: 100%;
+}
+
+/* td{
+  vertical-align:middle;
+  text-align: center;
+  width: 47%;
+} */
+
+hr{
+  display: flex;
+}
+
+.logo{
+  display:flex;
+  align-items: center;
+}
+
+.logo img{
+
+  margin-right: 0.3rem;
+}
+
+.toggle{
+  color: #151111;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.toggle{
+  color:#8371fd;
+}
+
+.input{
+position: relative;
+height: 37px;
+margin-bottom: 2rem;
+}
+
+.input-field{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1.5px solid #bbb;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #151111;
+  transition: 0.4s;
+}
+
+label{
+  font-size: 0.95rem;
+  position: absolute;
+  left:0;
+  top:50%;
+  transform: translateY(-50%);
+  color: #bbb;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-field.active{
+  border-bottom: 2px solid #A2F2BD;
+}
+
+.input-field.active + label{
+  font-size: 0.75rem;
+  top: -2px;
+}
+
+.sign-btn{
+  width: 100%;
+  height:43px;
+  background-color: #A2F2BD;
+  color: #fff;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.3rem ;
+}
+
+.sign-btn:hover{
+  background-color: #004644;
+}
+
+p{
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+
+.text{
+  color: #bbb;
+  transition: 0.3s;
+}
+
+.text a:hover{
+  color: #8371fd;
+}
+
+main.sign-up-mode .sign-in{
+  opacity: 0;
+  pointer-events: none;
+}
+
+main.sign-up-mode .sign-up{
+  opacity: 1;
+  pointer-events: all;
+}
+
+main.sign-up-mode .form-box{
+  left: 55%;
+}
+
+main.sign-up-mode .carousel{
+   left:0%;
+}
+
+/* .d-block{
+  position: absolute;
+  width:90%;
+  height: 90%;
+} */
+
+.jsr{
+
+  width: 95%;
+  height: 90%;
+  left: 10%;
+}
+
+@media (max-width: 850px) {
+  .box{
+    height: auto;
+    max-width: 550px;
+    overflow: hidden;
+  }
+
+  .or{
+    width: 100%;
+  }
+
+  .inner-box{
+    position: static;
+    transform: none;
+    width: revert;
+    height:revert;
+  }
+  .form-box{
+    position: revert;
+    width:auto;
+    height:auto;
+  }
+  
+  .carousel{
+    position: revert;
+    width: 100%;
+    height: auto;
+  }
+  
+  .welcome{
+    display: none;
+  }
+  form{
+    max-width: revert;
+    padding: 1.5rem 2rem 2rem ;
+    transition: 0.8s ease-in-out, opacity .45s linear;
+  }
+  /* form.sign-up{
+    transform: translateX(100%);
+  }
+  main.sign-up-mode form.sign-in-form{
+    transform: translateX( -100%);
+  }
+  main.sign-up-mode form.sign-up-form{
+    transform: translateX(0%);
+  } */
+  
+  .heading{
+    margin: 1.5rem 0;
+  }
+  
+  .g{
+    padding-left: 82px;
+    /* margin-left: 120px;
+    margin-top: 20px; */
+  }
+}
+
+@media (max-width: 530px) {
+  main{
+    padding:  1rem;
+  }
+
+  .box{
+    border-radius: 2rem;
+  }
+
+  .inner-box{
+    padding: 1rem;
+  }
+
+  .carousel{
+    padding:1.5rem 1rem;
+    border-radius: 1.6rem;
+  }
+
+  .g{
+    padding-left: 52px;
+  }
+
+}
+
+/* Home page css */
+
+#line{
+  margin-top:0;
+  padding:0;
+  width:82%;
+  margin:auto;
+  color: #028F21;
+  height:2px;
+}
+
+#nav{
+  padding-top: 15px;
+}
+
+#landing{
+  margin: 0;
+}
+
+#steps{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.work{
+  width: 70%;
+}
+
+.detect{
+  position: relative;
+  left: 100px;
+}
+
+.navbar-brand{
+  font-family: "Montserrat",sans-serif;
+  color: #028F21;
+  padding-left: 10%;
+  font-size: 1.5rem;
+}
+
+.nav-link{
+  color: #028F21;
+  margin-right: 12px;
+}
+
+.navbar-nav{
+  padding-right: 60px;
+}
+
+.navbar-item{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar-toggler{
+  margin-right: 90px;
+}
+
+/* hr{
+height: 2px;
+} */
+
+.home-img{
+  /* height: 80%; */
+  width:120%;
+  padding-top: 50px;
+  height: 120%;
+  margin-top: 50px;
+  left:20px;
+}
+
+.how{
+  position: relative;
+  top: 220px;
+  left:20px
+  /* width: 100px; */
+}
+
+   /* .h1color {
+  color:#14B910;
+
+  } */
+
+h1{
+  font-family: "Montserrat",sans-serif;
+  font-size: 3rem;
+  line-height: 1.25rem;
+  width: 70%;
+  position: relative;
+  top: 152px;
+  left: 90px;
+}
+
+p{
+  position: relative;
+  top: 120px;
+  left: 20px;
+}
+
+.h1color {
+  font-family: "Montserrat",sans-serif;
+  font-size: 3.5rem;
+  color:#14B910;
+  position: relative;
+  top: 32px;
+}
+
+.head{
+  width: 90%;
+  position: relative;
+  top: 100px;
+  left: 20px;
+}
+
+.green{
+  margin-top: 0;
+  padding-top: 0;
+  color: #14B910;
+}
+
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container-fluid{
+  padding: 2% 10%;
+}
