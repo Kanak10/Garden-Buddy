@@ -40,24 +40,46 @@
         </section>
     </div>
 
+    <section id="features">
+        <h1>Features</h1>
+        <div class="container fluid feat">
+            <div class="row">
+                <div class="col lg-4  fle">
+                    <div class="features-1">
+                        <img class="comm fimage" src="community.jpg" alt="communtiy">
+                        <h3 class="features-head">Gardening Community</h3>
+                        <p class="fp">Enjoy your hobby with other people around you.Learn different ways of gardening
+                            and find people with
+                            same hobby , appreciate each other’s work .
+                        </p>
+                    </div>
+                </div>
+                <div class="col lg-4 fle">
+                    <div class="features-2">
+                        <img class="accuracy fimage" src="accuracy.png" alt="accuracy">
+                        <h3 class="features-head ha">Accuracy</h3>
+                        <p class="fp">Our ML model has a accuracy around 75% that is our output is almost on point.
+                        </p>
+                    </div>
+                </div>
+                <div class="col lg-4 fle">
+                    <div class="features-3">
+                        <img class="cure fimage" src="cure.svg" alt="cure">
+                        <h3 class="features-head hc">Cure & Remedies</h3>
+                        <p class="fp">We provide step by step cure for the disease our model has detected
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="steps">
         <div class="container-fluid">
             <img class="work " src="how-it-work.svg" alt="">
-
-            <button type="button" class="btn btn-outline-success btn-lg detect">try detect disease</button>
+            <form action="/model" method="GET">
+                <button type="submit" class="btn btn-outline-success btn-lg detect">try detect disease</button>
+            </form>
         </div>
-
-        <!-- <div class="first">
-
-    </div>
-    <!-- <hr> -->
-        <!-- <div class="second">
-
-    </div> -->
-        <!-- <hr> -->
-        <!-- <div class="third">
-
-    </div> -->
     </section>
-
     <%- include("partial/footer") %>

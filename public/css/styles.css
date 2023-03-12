@@ -472,3 +472,89 @@ p{
 .container-fluid{
   padding: 2% 10%;
 }
+
+.how:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#features{
+  background-color: #E7F8E4;
+  text-align: center;
+  padding-bottom: 104px;
+  padding-top: 80px;
+  margin-top: 128px;
+}
+
+.features-1 , .features-2 , .features-3{
+  Width: 350px;
+  Height: 502px;
+  background-color: white;
+  border-radius: 2.5rem;
+}
+
+.features-head{
+  position: relative;
+  color:#48C94A;
+  top: 30px;
+}
+
+.comm{
+  height: 172px;
+  width: 226px;
+  position: relative;
+  border-radius: 0px;
+
+}
+
+.accuracy{
+  height: 134px;
+  width: 180px;
+  position: relative;
+  border-radius: 49px;
+  padding-top: 20px;
+}
+
+.cure{
+  height: 139px;
+  width: auto;
+  position: relative;
+  background-color: orange;
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+.hc{
+  padding-top: 15px;
+}
+
+.fp{
+  position: relative;
+  left: 0;
+  top: 60px;
+  padding: 16px 20px;
+}
+
+.ha{
+  padding-top: 35px;
+}
+
+.fimage{
+  top:20px;
+}
+
+.fle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#features h1{
+  color: #028F21;
+  padding:30px;
+  font-family: "Poppins",sans-serif;
+  line-height: 0rem;
+  width: auto;
+  top: 0;
+  left: 0;
+  position: static;
+}

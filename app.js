@@ -3,6 +3,8 @@ import ejs from "ejs";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
+import {LocalStorage} from 'node-localstorage';
+global.localStorage = new LocalStorage('./scratch');
 
 const saltRounds = 10;
 const URL = "mongodb+srv://Kanak:Kanak@cluster0.z7y2utm.mongodb.net/userDB?retryWrites=true&w=majority";
@@ -86,11 +88,23 @@ app.route("/")
         }
     );
 
-// app.route("/homePage")
-//     .get(
-//         (req, res)=>{
-//             res.render("index");
-//         }
-//     ).post();
+app.get("/model", (req, res)=>{
+    res.render("model");
+});
+
+app.get("/model/cure", (req, res)=>{
+    let diseaseDetail;
+console.log("hello");
+    diseaseDetail = JSON.parse(localStorage.getItem('_account'));   
+    // localStorage.removeItem('_account');
+    // diseaseDetail = atob(diseaseDetail);
+    // diseaseDetail = JSON.parse(diseaseDetail);
+    console.log(diseaseDetail);
+    //do what you need with the Object
+    // fillFields(diseaseDetail.disease);
+    // console.log(diseaseDetail.disease)
+    console.log("bye");
+    res.render("cure");//, {disease: diseaseDetail.disease});
+});
 
 app.listen(3000, ()=>console.log("Server started on port 3000"));
