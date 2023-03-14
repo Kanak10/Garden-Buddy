@@ -61,26 +61,13 @@ async function predict() {
     console.log(data[class_idx]);
     console.log(prediction);
 
-    function saveData(data, class_idx) {
-      var diseaseDetail = {
-        disease: data[class_idx]
-      };
-      //converts to JSON string the Object
-      account = JSON.stringify(diseaseDetail);
-      //creates a base-64 encoded ASCII string
-      // account = btoa(diseaseDetail);
-      //save the encoded accout to web storage
-      localStorage.setItem('_account', account);
-    }
-
-    saveData(data, class_idx);
+    localStorage.setItem('disease', JSON.stringify(data[class_idx]));
 
     progressBar.animate(prediction[class_idx] - 0.005); // percent
 
     pconf.style.display = "block";
 
     confidence.innerHTML = Math.round(prediction[class_idx] * 100);
-
 
   });
 }

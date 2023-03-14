@@ -1,5 +1,122 @@
 <%- include("partial/header"); -%>
 
-<h1>Cure</h1>
+    <style>
+        h1 {
+            font-family: "Poppins";
+            text-align: center;
+        }
 
-<%- include("partial/footer"); -%>
+        .cure {
+            margin: 3rem 0rem;
+            padding: 5rem;
+        }
+
+        .infect {
+            position: relative;
+            height: 341px;
+            width: 400px;
+            left: 190px;
+            top: 34px;
+        }
+
+        .cp {
+            padding: 6rem;
+            position: relative;
+            padding-left: 0px;
+            padding-right: 180px;
+            /* text-align: center; */
+        }
+
+        @media (max-width: 1385px) {
+            .cp {
+                padding: 6rem;
+                position: relative;
+            }
+
+        }
+
+        @media (max-width: 1220px) {
+            .cp {
+                /* padding: 6rem; */
+                position: relative;
+                top: 102px;
+                left: 40px;
+                padding: 0;
+            }
+
+            .infect {
+                position: relative;
+                height: 341px;
+                width: 400px;
+                left: 40px;
+                top: 34px;
+            }
+        }
+
+        @media (max-width: 1040px) {
+            .cp {
+                /* padding: 6rem; */
+                position: relative;
+                top: 102px;
+                left: 40px;
+                padding: 0;
+            }
+
+            .infect {
+                position: relative;
+                height: 341px;
+                width: 400px;
+                left: -20px;
+                top: 34px;
+            }
+        }
+
+        @media (max-width: 940px) {
+            .infect {
+                position: relative;
+                height: 341px;
+                width: 400px;
+                left: -55px;
+                top: 34px;
+
+            }
+        }
+
+        @media (max-width: 770px) {
+            .infect {
+                position: relative;
+                height: 341px;
+                width: 400px;
+                left: 21px;
+                top: 34px;
+                object-position: 50% 50%;
+            }
+        }
+    </style>
+
+    <div class="container-fluid cure">
+        <h1>Cure</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-6 ">
+                <div class="">
+                    <img class="infect" src="mountain.jpg" alt="infected plant image">
+                    <!-- <h3 class="features-head">Gardening Community</h3> -->
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 ">
+                <div class="">
+                    <!-- <img class="accuracy fimage"src="accuracy.png" alt="accuracy"> -->
+                    <!-- <h3 class="features-head ha">Accuracy</h3> -->
+                    <p class="cp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <%- include("partial/footer"); -%>

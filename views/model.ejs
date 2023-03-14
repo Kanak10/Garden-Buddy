@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLANT DISEASE CLASSIFIER</title>
+    <title>Garden Buddy</title>
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,8 +13,6 @@
 <body>
     <h1>Plant Disease Classifier 🍀</h1>
     <hr>
-
-
     <div class="upload-btn-wrapper">
         <button class="btn upload-file font-weight-500">
             <span class="upload-btn">
@@ -47,11 +46,10 @@
                       
                     </div>
                   </div>
-
             </div>
             <p style="padding : 10px;"> CONFIDENCE : <b><span class="confidence"></span></b> %</p>
             <form action="/model/cure" method="get">
-                <button type="submit">Cure</button>
+                <button type="submit" class="cure">CURE</button>
             </form>
         </div>
     </div>
