@@ -16,6 +16,7 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 
 const saltRounds = 10;
 const URL = "mongodb+srv://Kanak:Kanak@cluster0.z7y2utm.mongodb.net/userDB?retryWrites=true&w=majority";
+//const URl = "mongodb+srv://bnaam1550:Benaam@cluster0.htpisau.mongodb.net/userDB?retryWrites=true&w=majority"
 
 const app = express();
 app.use(express.static("public"));
@@ -74,8 +75,6 @@ const User = mongoose.model("User", userSchema);
 
 passport.use(User.createStrategy());
 
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
 passport.serializeUser(function(user, done) {
     done(null, user);
   });
@@ -140,7 +139,6 @@ app.route("/")
                         }
                     }
                 });
-                console.log(req.body);
             }
             
         }
@@ -148,14 +146,6 @@ app.route("/")
 
 app.get("/model", (req, res)=>{
     res.render("model");
-});
-
-app.get("/model/cure",async (req, res)=>{
-    console.log("hello");
-    const data = await JSON.parse(localStorage.getItem('disease'));
-    console.log("Disease Data",data);
-    console.log("bye");
-    res.render("cure");//, {disease: diseaseDetail.disease});
 });
 
 app.listen(3000, ()=>console.log("Server started on port 3000"));

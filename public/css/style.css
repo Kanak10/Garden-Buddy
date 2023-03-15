@@ -152,7 +152,6 @@ img{
     margin-top: 25px;
 }
 
-
 .progress {
 width: 130px;
 height: 130px;
@@ -200,4 +199,13 @@ path {
     stroke: limegreen;
     stroke-width: 10;
     fill-opacity: 0.2;
+}
+
+#cureDetails {
+    background-color: #d7f7fc;
+    padding: 20px;
+}
+
+#cureDetails p {
+    font-size: 20px;
 }
