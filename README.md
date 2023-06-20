@@ -33,3 +33,5 @@ Step 4: Scan plant from given dataset<br /><br />
 ![image](https://github.com/Kanak10/Garden-Buddy/assets/66711082/3441146a-81b4-43c6-8a71-f2257a5f49cd)
 
 Step 5: Click on cure for Remedies
+
+### Thank you ❤️ for visit
